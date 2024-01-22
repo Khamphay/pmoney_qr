@@ -1,6 +1,7 @@
 library pmoney_qr;
 
 import 'dart:convert';
+import 'package:flutter/foundation.dart';
 import 'package:pmoney_qr/payload.dart';
 
 class PmoneyQR {
@@ -12,7 +13,7 @@ class PmoneyQR {
       String qrExpired = "";
       final now = DateTime.now();
       final leg = payload.expired.length;
-      final exp = int.parse(payload.expired.substring(leg - 1));
+      final exp = int.parse(payload.expired.substring(0, leg - 1));
       final unit = payload.expired.substring(leg - 1, leg).toLowerCase();
       if (unit == "h") {
         qrExpired =
@@ -24,7 +25,7 @@ class PmoneyQR {
         throw ArgumentError("Expired must include only `h` or `m`.");
       }
       final billId = payload.billId;
-
+      debugPrint(amount);
       var data = [
         _f("00", "01"),
         _f("01", "12"),
@@ -41,7 +42,7 @@ class PmoneyQR {
         _f("52", payload.mccCode),
         _f("53", "418"),
         _f("54", amount),
-        billId.isNotEmpty ? _f("62", _serialize([_f("01", billId)])) : null,
+        _f("62", _serialize([_f("01", billId)])),
         _f("58", "LA"),
       ];
       var dataToCrc = '${_serialize(data)}6304';

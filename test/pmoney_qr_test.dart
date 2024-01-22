@@ -12,10 +12,10 @@ void main() {
         qr.genQRCode(
             "",
             Payload(
-                mccCode: "mccCode",
+                mccCode: "0000",
                 billId: "billId",
-                amount: 100,
+                amount: 1000,
                 expired: "10m")),
-        String);
+        isNotEmpty);
   });
 }
