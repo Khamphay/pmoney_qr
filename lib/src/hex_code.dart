@@ -17,8 +17,7 @@ const POI_METHOD_STATIC = "11";
 const POI_METHOD_DYNAMIC = "12";
 const APP_ID = "00";
 const ID_ACC_Main = "01";
-const EXPIRE_TIME = "02";
-const SC_KEY = "03";
+const QR_EXPIRE_TIME = "04";
 
 // LQR
 const AID = "00";

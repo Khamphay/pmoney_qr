@@ -51,7 +51,7 @@ class GenQRCode {
             _f(IIN, iin),
             _f(PAYMENT_TYPE, "002"),
             _f(RECEIVER_ID, targetCode),
-            qrExpired.isNotEmpty ? _f(EXPIRE_TIME, qrExpired) : null,
+            qrExpired.isNotEmpty ? _f(QR_EXPIRE_TIME, qrExpired) : null,
           ]),
         ),
         _f(ID_MERCHANT_CODE, payload.mccCode),

@@ -12,6 +12,6 @@
 * Fix bug
 * App support open App
 
-[0.0.3] - 2024-01-24
+[0.0.4] - 2024-01-24
 
 * Remove debuging
