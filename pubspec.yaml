@@ -1,6 +1,6 @@
 name: pmoney_qr
 description: The package use for generate Pmoney Merchant QR payment.
-version: 0.0.3
+version: 0.0.4
 homepage: https://github.com/Khamphay/pmoney_qr.git
 
 environment:

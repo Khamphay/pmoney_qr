@@ -64,7 +64,6 @@ class GenQRCode {
       data.add(
           _f(ID_CRC, _formatCrc(_crc16xmodem(utf8.encode(dataToCrc), 0xffff))));
       _qr = _serialize(data);
-      debugPrint(_qr);
       return _qr;
     } catch (error) {
       rethrow;
