@@ -13,7 +13,7 @@ class GenQRCode {
   void openApp() async {
     // if (_qr.isEmpty) throw  AssertionError("Not found QR code");
     try {
-      await launchUrl(Uri.parse('pmoney://app.pmoney.la/qr/$_qr'),
+      await launchUrl(Uri.parse('pmoney://qr/$_qr'),
           mode: LaunchMode.externalApplication);
     } catch (e) {
       rethrow;
